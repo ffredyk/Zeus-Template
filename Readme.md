@@ -14,8 +14,8 @@ Generic Zeus mission template enhanced with custom functions (modules, context m
 
 ### Functions
 
-*   Dynamic Simulation
+*   [Dynamic Simulation](https://github.com/ffredyk/Zeus-Template/wiki/Dynamic-Simulation)
     *   Module
     *   Context menu actions
-*   Force player respawn
+*   [Force player respawn](https://github.com/ffredyk/Zeus-Template/wiki/Force-player-respawn)
     *   Module
