@@ -56,7 +56,7 @@ fnc_zeus_dynsim =
 	{
 		_veh = vehicle _objectUnderCursor;
 		_enable = !dynamicSimulationEnabled _veh;
-		if(_veh == _objectUnderCursor) then 
+		if(_veh isKindOf "Man") then 
 		{
 			(group _veh) enableDynamicSimulation _enable;
 			_count = count (units (group _veh));
