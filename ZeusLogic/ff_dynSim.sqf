@@ -131,9 +131,45 @@ fnc_zeus_dynsim_logic =
 
 
 //---------- MODULE
+//* Main module
 ["[FE] AI", "Dynamic Simulation", 
 {
 	_this call fnc_zeus_dynsim;
+}] call zen_custom_modules_fnc_register;
+
+//* Settings module
+["[FE] Settings", "Dynamic Simulation Settings", 
+{
+	[
+		"Dynamic Simulation Settings",
+		[
+			["Checkbox", ["Enable system?", "Enable/disable the entire dynamic simulation system"], [dynamicSimulationSystemEnabled]],
+			["Toolbox", ["Distances", "Wake activation distances"], [0, 1, 0, ["nada"]]],
+			["Slider", ["Infantry (Groups)", "Size of the zone unit (group) has to have a wake-enabled entity inside in order to be simulated"], [300,2000,dynamicSimulationDistance "Group",0]],
+			["Slider", ["Manned vehicle", "Size of the zone vehicle has to have a wake-enabled entity inside in order to be simulated"], [50,2000,dynamicSimulationDistance "Vehicle",0]],
+			["Slider", ["Empty vehicle", "Size of the zone vehicle has to have a wake-enabled entity inside in order to be simulated"], [10,2000,dynamicSimulationDistance "EmptyVehicle",0]],
+			["Slider", ["Object", "Size of the zone object has to have a wake-enabled entity inside in order to be simulated"], [10,2000,dynamicSimulationDistance "Prop",0]],
+			["Toolbox", ["Multipliers", "Dynamic simulation multipliers (coefficients)"], [0, 1, 0, ["nada"]]],
+			["Slider", ["IsMoving", "Distance multiplier applied when dynamic simulation entity is moving"], [1,10,dynamicSimulationDistanceCoef "IsMoving",0]]
+		],
+		{
+			(_this #0) params ["_enable", "_nada", "_act_units", "_act_veh", "_act_eveh", "_act_prop", "_nada2", "_mul_ismoving"]; //Dialog params
+
+			[_enable] remoteExec ["enableDynamicSimulationSystem", 0];
+
+			["Group",_act_units] remoteExec ["setDynamicSimulationDistance", 0];
+			["Vehicle",_act_veh] remoteExec ["setDynamicSimulationDistance", 0];
+			["EmptyVehicle",_act_eveh] remoteExec ["setDynamicSimulationDistance", 0];
+			["Prop",_act_prop] remoteExec ["setDynamicSimulationDistance", 0];
+
+			["IsMoving", _mul_ismoving] remoteExec ["setDynamicSimulationDistanceCoef", 0];
+
+			//Info message
+			[objNull, "Dynamic Simulation settings changed!"] call BIS_fnc_showCuratorFeedbackMessage;
+		},
+		{},
+		_this
+	] call zen_dialog_fnc_create;
 }] call zen_custom_modules_fnc_register;
 
 
