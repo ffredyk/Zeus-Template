@@ -37,6 +37,7 @@ fnc_zeus_respawnPlayers =
 
 			//Units
 			_filtered append (_who #2);
+			_filtered arrayIntersect _filtered; //Remove duplicates
 
 			//Broadcast command to force respawn
 			{
