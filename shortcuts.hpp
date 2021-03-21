@@ -1,0 +1,2 @@
+#define PARCONTEXT params [["_position", [0,0,0], [[]]], ["_selObjects", [], [[]]], ["_selGroups", [], [[]]], ["_selWaypoints", [], [[]]], ["_selMarkers", [], [[]]], ["_hover", objNull, [objNull, grpNull, [], ""]], ["_args", [], [[]]]];
+#define MODCONTEXT (_this #1) params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];

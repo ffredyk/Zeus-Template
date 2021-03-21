@@ -8,14 +8,14 @@ class EditorData
 	toggles=1061;
 	class ItemIDProvider
 	{
-		nextID=219;
+		nextID=260;
 	};
 	class Camera
 	{
-		pos[]={14673.624,34.552303,16711.729};
-		dir[]={-0.53435785,-0.59334576,0.60212356};
-		up[]={-0.39387468,0.80491483,0.44382492};
-		aside[]={0.74800062,-7.2014518e-007,0.66381419};
+		pos[]={14660.226,25.816113,16709.766};
+		dir[]={-0.50127894,-0.52524686,0.68765724};
+		up[]={-0.30940777,0.85094756,0.42444819};
+		aside[]={0.80809671,-2.9243529e-007,0.58907419};
 	};
 };
 binarizationWanted=0;
@@ -773,7 +773,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=1;
+							value=3;
 						};
 					};
 				};
@@ -863,7 +863,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=1;
+							value=3;
 						};
 					};
 				};
@@ -953,7 +953,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=1;
+							value=3;
 						};
 					};
 				};
@@ -1043,7 +1043,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=1;
+							value=3;
 						};
 					};
 				};
@@ -1133,7 +1133,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=1;
+							value=3;
 						};
 					};
 				};
