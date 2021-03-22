@@ -4,6 +4,7 @@ else
 	[] execVM "ZeusLogic\ff_dynSim.sqf"; //Dynamic Simulation add-ins
 	[] execVM "ZeusLogic\ff_utils.sqf"; //Utils add-ins
 	[] execVM "ZeusLogic\ff_queries.sqf"; //Query logic system add-ins
+	[] execVM "ZeusLogic\ff_curves.sqf"; //Query logic system add-ins
 };
 
 fnc_zeusMessage = 
